@@ -1,0 +1,33 @@
+.App {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+
+    // NavBar
+
+    .view {
+        padding: 0.2rem;
+
+        min-height: 100svh;
+        background-color: #111;
+
+        .Title {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .App {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr auto;
+
+        height: 100dvh;
+
+        .view {
+            order: -1; // NavBar to bottom
+            min-height: auto;
+        }
+
+        // NavBar
+    }
+}

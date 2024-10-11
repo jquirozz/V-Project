@@ -1,0 +1,60 @@
+// Global variables
+:root {
+  --main: #f05;
+
+  --theme_text: #eee;
+  --theme_c0: #000;
+  --theme_c1: #111;
+  --theme_c2: #222;
+  --theme_c3: #333;
+  --theme_c4: #444;
+  --theme_c5: #555;
+  --theme_c6: #666;
+}
+
+// gt font
+@font-face {
+  font-family: gt;
+  src:
+    local("gt"),
+    url(/fonts/gt.woff) format("woff");
+}
+
+// acorn font
+@font-face {
+  font-family: acorn;
+  src:
+    local("acorn"),
+    url(/fonts/acorn.woff) format("woff");
+}
+
+// Reset styles
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+
+  font-family: gt;
+  font-size: 1.1rem;
+  text-decoration: none;
+
+  color: var(--theme_text);
+
+  & a {
+    color: inherit;
+  }
+}
+
+// Titles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: acorn;
+  font-size: 1.5rem;
+}

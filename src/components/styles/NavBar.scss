@@ -1,0 +1,111 @@
+.NavBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #222;
+
+    .header {
+        display: grid;
+        place-items: center;
+
+        gap: 0.5rem;
+        padding-bottom: 1rem;
+
+        background-color: var(--main);
+
+        & img {
+            width: 100%;
+            aspect-ratio: 2;
+            object-fit: contain;
+            filter: invert(1);
+        }
+        & h1 {
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            filter: drop-shadow(0 0 5px #000c);
+            color: var(--theme_text);
+        }
+    }
+
+    .links {
+        display: grid;
+        gap: 0.2rem;
+        padding: 0.2rem;
+
+        & a {
+            display: flex;
+            align-items: center;
+
+            gap: 1rem;
+            padding: 1rem;
+
+            border: 1px solid transparent;
+            border-radius: 0.2rem;
+
+            color: var(--theme_text);
+            background-color: var(--theme_c3);
+
+            & svg {
+                font-size: 1.5rem;
+            }
+
+            & h4 {
+                padding-top: 0.25rem;
+
+                font-size: 1.25rem;
+                text-transform: capitalize;
+            }
+        }
+        .mobile-logo {
+            display: none;
+        }
+        .active {
+            border: 1px solid var(--main);
+            background-color: var(--theme_c1);
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .NavBar {
+        display: flex;
+        flex-direction: row;
+
+        .header {
+            display: none;
+        }
+
+        .links {
+            display: flex;
+            width: 100%;
+
+            & a {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                padding: 1rem;
+
+                & svg {
+                    font-size: 2rem;
+                }
+
+                & h4 {
+                    display: none;
+                }
+            }
+            .mobile-logo {
+                display: flex;
+                background-color: var(--main);
+
+                & img {
+                    max-width: 2rem;
+                    aspect-ratio: 1;
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+}
