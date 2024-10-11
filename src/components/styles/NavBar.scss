@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    background-color: #222;
+    background-color: var(--theme_c0);
 
     .header {
         display: grid;
@@ -23,8 +23,7 @@
         & h1 {
             font-size: 1.75rem;
             text-transform: uppercase;
-            filter: drop-shadow(0 0 5px #000c);
-            color: var(--theme_text);
+            color: #fff;
         }
     }
 
@@ -44,7 +43,7 @@
             border-radius: 0.2rem;
 
             color: var(--theme_text);
-            background-color: var(--theme_c3);
+            background-color: var(--theme_c1);
 
             & svg {
                 font-size: 1.5rem;
@@ -62,7 +61,7 @@
         }
         .active {
             border: 1px solid var(--main);
-            background-color: var(--theme_c1);
+            background-color: var(--theme_c0);
         }
     }
 }
