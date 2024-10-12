@@ -1,14 +1,14 @@
 .Settings {
     display: grid;
     gap: 2rem;
-    padding: 1rem 1.25rem;
+    padding: 0.5rem 0.75rem;
 
-    .themes {
+    .Settings_Section {
         & h2 {
             font-size: 2.5rem;
         }
 
-        .button-wrap {
+        .action-wrap {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
@@ -28,6 +28,9 @@
                 & label {
                     text-transform: capitalize;
                 }
+            }
+            .active {
+                background-color: var(--main);
             }
         }
     }

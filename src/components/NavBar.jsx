@@ -10,7 +10,7 @@ const LOGO_IMG = <img src="/logo.png" alt="Valorant logo" />;
 
 const ITEMS = [
   {
-    text: "characters",
+    text: "agents",
     icon: <GiNinjaHead />,
   },
   {

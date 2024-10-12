@@ -5,9 +5,11 @@
     // NavBar
 
     .view {
-        padding: 0.2rem;
+        padding: 0.5rem 0.75rem;
 
-        min-height: 100svh;
+        overflow-y: auto;
+        height: 100svh;
+
         background-color: var(--theme_c1);
 
         .Title {
@@ -25,7 +27,7 @@
 
         .view {
             order: -1; // NavBar to bottom
-            min-height: auto;
+            height: auto;
         }
 
         // NavBar
