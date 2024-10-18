@@ -3,13 +3,12 @@
     flex-direction: column;
     justify-content: space-between;
 
-    background-color: var(--theme_c0);
+    background-color: var(--theme_c1);
 
     .header {
         display: grid;
         place-items: center;
 
-        gap: 0.5rem;
         padding-bottom: 1rem;
 
         background-color: var(--main);
@@ -18,7 +17,6 @@
             width: 100%;
             aspect-ratio: 2;
             object-fit: contain;
-            filter: invert(1);
         }
         & h1 {
             font-size: 1.75rem;
@@ -43,7 +41,7 @@
             border-radius: 0.2rem;
 
             color: var(--theme_text);
-            background-color: var(--theme_c1);
+            background-color: var(--theme_c0);
 
             & svg {
                 font-size: 1.5rem;
@@ -56,12 +54,12 @@
                 text-transform: capitalize;
             }
         }
-        .mobile-logo {
-            display: none;
-        }
         .active {
             border: 1px solid var(--main);
-            background-color: var(--theme_c0);
+            background-color: var(--theme_c1);
+        }
+        .mobile-logo {
+            display: none;
         }
     }
 }
@@ -101,8 +99,7 @@
 
                 & img {
                     max-width: 2rem;
-                    aspect-ratio: 1;
-                    filter: invert(1);
+                    object-fit: contain;
                 }
             }
         }

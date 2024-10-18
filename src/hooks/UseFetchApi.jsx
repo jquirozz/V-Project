@@ -16,7 +16,7 @@ function UseFetchApi({ query, param }) {
         const resJson = await res.json();
 
         if (resJson.status !== 200)
-          throw new Error(resJson.error || "Failed to fetch characters.");
+          throw new Error(resJson.error || "Failed to fetch.");
 
         setContent(resJson.data);
       } catch (error) {

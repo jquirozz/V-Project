@@ -1,6 +1,5 @@
 export const themes = {
   light: {
-    "--main": "#f05",
     "--theme_text": "#111",
     "--theme_c0": "#fff",
     "--theme_c1": "#eee",
@@ -11,7 +10,6 @@ export const themes = {
     "--theme_c6": "#999",
   },
   dark: {
-    "--main": "#f05",
     "--theme_text": "#fff",
     "--theme_c0": "#000",
     "--theme_c1": "#111",

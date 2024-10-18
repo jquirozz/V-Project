@@ -1,3 +1,7 @@
+:root {
+  --main: #d195ef;
+}
+
 // gt font
 @font-face {
   font-family: gt;
@@ -41,10 +45,26 @@ h6 {
   font-size: 1.5rem;
 }
 
+// Input & Button reset
+input,
 button {
   border: none;
   outline: none;
+}
+
+// Input style
+input {
+  background-color: var(--theme_c3);
+
+  &:focus {
+    background-color: var(--theme_c2);
+  }
+}
+
+// Button style
+button {
   cursor: pointer;
+  border: 1px solid transparent;
   background-color: var(--theme_c3);
 
   &:hover {

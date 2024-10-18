@@ -1,2 +1,122 @@
 .Agents {
+    display: grid;
+    gap: 0.75rem;
+
+    .filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .byName {
+            flex: 2;
+            min-width: 300px;
+
+            display: grid;
+            grid-template-columns: 1fr 3.5rem;
+
+            height: 3rem;
+
+            overflow: hidden;
+            border-radius: 5px;
+
+            background-color: var(--main);
+
+            .icon {
+                display: grid;
+                place-items: center;
+
+                & svg {
+                    font-size: 1.2rem;
+                }
+            }
+            & input {
+                padding: 0.25rem 1rem;
+
+                box-shadow: inset 0 0 5px var(--theme_c3);
+                transition: box-shadow 150ms ease-in-out;
+
+                &:focus {
+                    box-shadow: inset 0 0 5px var(--main);
+                }
+            }
+        }
+        .byRole {
+            flex: 1;
+            min-width: 300px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 0.5rem;
+
+            & button {
+                flex: 1;
+                height: 3rem;
+                overflow: hidden;
+
+                padding: 0.4rem;
+
+                border-radius: 5px;
+
+                & img {
+                    height: 100%;
+                    filter: drop-shadow(0 0 5px #0008);
+                }
+            }
+            .active {
+                background-color: var(--main);
+            }
+        }
+    }
+
+    .filteredRole {
+        padding-top: 0.75rem;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+        gap: 0.5rem;
+
+        .card {
+            display: grid;
+            grid-template-columns: 4fr 3fr;
+
+            aspect-ratio: 1.75;
+            max-width: 650px;
+
+            border-radius: 5px;
+
+            box-shadow: 0 0 0 transparent;
+            transition: box-shadow 300ms ease-in-out;
+            background: var(--main);
+
+            .icon {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                mask-image: linear-gradient(to right, black 85%, transparent);
+                filter: drop-shadow(-5px -5px 5px #0005);
+            }
+            .background {
+                height: 100%;
+                width: 100%;
+
+                padding: 0.25rem;
+                padding-right: 0.75rem;
+
+                object-fit: contain;
+                filter: opacity(0.6);
+                transition: filter 300ms ease-in-out;
+            }
+        }
+        .card:hover {
+            .background {
+                filter: opacity(0.9);
+            }
+        }
+    }
 }

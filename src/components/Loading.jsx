@@ -1,7 +1,7 @@
 import "./styles/Loading.scss";
 
-function Loading({ message }) {
-  return <div className="Loading">{message}</div>;
+function Loading() {
+  return <div className="Loading">Loading</div>;
 }
 
 export default Loading;
